@@ -1,0 +1,13 @@
+version: "3"
+
+volumes:
+  data:
+
+services:
+  api:
+    restart: always
+    image: "openelevation/open-elevation"
+    ports:
+      - 9999:8080
+    volumes:
+      - data:/code/data
